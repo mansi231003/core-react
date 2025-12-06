@@ -1,0 +1,44 @@
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #080808;
+    height: 80px;
+}
+
+nav {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B1B1B;
+    height: 100%;
+
+}
+
+li {
+    list-style: none;
+}
+
+.item-link {
+    text-decoration: none;
+    color: #9C9C9C;
+   
+}
+
+.icons-container{
+    width: 25%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
