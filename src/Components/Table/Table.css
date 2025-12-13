@@ -1,0 +1,20 @@
+.table-heading{
+    background-color: black;
+    color: white;
+    font-size: 21px;
+}
+
+.table-body{
+    background-color: rgb(226, 222, 222);
+    font-size: 18px;
+}
+
+.items{
+    padding: 10px;
+}
+
+.table-border{
+    border: solid 2px black;
+    margin-top: 10px;
+    padding: 10px;
+}

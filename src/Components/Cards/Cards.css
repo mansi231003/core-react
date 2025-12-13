@@ -1,0 +1,43 @@
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1919;
+    border-radius: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.appDesign-text{
+    color: rgb(233, 105, 59);
+}
+
+
+.card .para{
+    color: #707070;
+    width: 75%;
+    text-align: center;
+}
+
+
+.portfolio-img-wrap{
+    border-radius: 16px;
+    width: 30%;
+}
+
+.portfolio-img{
+    width: 100%;
+}
+
+.portfolio-img-wrap .details{
+    color: #C6C6C6;
+    background-color: #1a1919;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+
+}

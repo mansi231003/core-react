@@ -4,7 +4,7 @@ export default function Header(){
         <>
         <div className="container">
         <nav>
-            <ul>
+            <ul className="nav-menu">
                 <li><a className="item-link" href="#">Home</a></li>
                 <li><a className="item-link" href="#">Case Studies</a></li>
                 <li><a className="item-link" href="#">Testimonials</a></li>
