@@ -5,6 +5,7 @@ import Aboutme from "./Components/About me/AboutMe";
 import Portfolio from "./Components/Portfolio section/Portfolio";
 import ContactMe from "./Components/Contact me/ContactMe";
 import Footer from "./Components/Footer/Footer";
+
 export default function Project(){
     return(
         <>

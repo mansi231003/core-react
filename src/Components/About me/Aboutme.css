@@ -2,7 +2,9 @@
     color: white;
     padding-top: 20px;
     margin-bottom: 0;
+    font-size: 33px;
 }
+
 
 .aboutme-section {
     padding: 25px 0px 25px 0px;
@@ -16,17 +18,35 @@
 .aboutme-section .para {
     width: max-content;
     margin: 0;
-    color: #707070;
+    color: var(--secondary-text-color);
     text-align: center;
+    font-size: 18px;
 }
 
 .aboutme-img-container {
     width: 42%;
     position: relative;
-    height: 500px;
     display: flex;
     justify-content: center;
     align-items: end;
+}
+
+.aboutme-man-img {
+    width: 80%;
+    object-fit: cover;
+    height: 99%;
+    z-index: 9;
+}
+
+.aboutme-img-container::after {
+    content: "";
+    position: absolute;
+    height: 79%;
+    width: 95%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: #1a1919;
+
 }
 
 .aboutme-description {
@@ -35,18 +55,10 @@
 
 .aboutme-description .para {
     width: 90%;
-    color: #959595;
+    color: var(--primary-text-color);
     padding: 65px 0px 30px 0px;
     text-align: justify;
-
-}
-
-.ellipse {
-    width: 360px;
-    height: 400px;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    background-color: #1a1919;
+    font-size: 18px;
 
 }
 
@@ -60,6 +72,7 @@
 .aboutme-button {
     width: 140px;
     gap: 10px;
+    padding: 15px;
     margin-left: 22px;
 }
 
@@ -82,7 +95,7 @@
 }
 
 .social-media-icon {
-    border: solid 7px orangered;
+    border: solid 7px var(--primary-color);
     border-radius: 50%;
     width: 64px;
     height: 64px;
@@ -92,7 +105,7 @@
 }
 
 .icon-percentage-wrap {
-    color: #959595;
+    color: var(--primary-text-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,11 +115,65 @@
 }
 
 .icon-percentage-wrap .percentage {
-    color: orangered;
+    color: var(--primary-color);
 }
 
+@media screen and (min-width:1400px) {
+    .aboutme-section .para {
+        font-size: 23px;
+    }
 
-@media screen and (max-width:900px) {
+    .aboutme-img-container::after {
+
+        width: 76%;
+    }
+
+    .aboutme-section .heading {
+        font-size: 38px;
+    }
+
+    .aboutme-section .description-container {
+        padding-top: 20px;
+    }
+
+    .aboutme-button {
+        width: 180px;
+        margin-left: 5px;
+    }
+
+    .aboutme-man-img {
+        width: 64%;
+    }
+
+    .social-media-icon-container {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width:1020px) {
+    .aboutme-man-img {
+        width: 88%;
+        height: 79%;
+    }
+
+    .aboutme-img-container::after {
+
+        width: 100%;
+        height: 64%;
+
+    }
+
+    .aboutme-img-container {
+        margin-top: -70px;
+    }
+}
+
+@media screen and (max-width:920px) {
+
+    .aboutme-man-img {
+        height: 75%;
+        width: 85%;
+    }
 
     .aboutme-section .description-container {
         padding-left: 20px;
@@ -115,25 +182,40 @@
     .aboutme-description .para {
         width: 95%;
     }
-}
-
-@media screen and (max-width:800px) {
 
     .aboutme-description {
         width: 45%;
     }
 
+    .aboutme-img-container {
+        width: 50%;
+        margin-top: -100px;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+
     .aboutme-description .para {
         font-size: 14px;
     }
 
-     .aboutme-img-container .man-img{
-        width: 88%;
+    .aboutme-man-img {
+        height: 90%;
+        width: 90%;
+    }
+
+    .aboutme-img-container::after {
+        height: 74%;
+
     }
 
     .aboutme-img-container{
-        width: 48%;
+        margin-top: -50px;
     }
+
+
+
 }
 
 @media screen and (max-width:700px) {
@@ -144,10 +226,11 @@
 
     .aboutme-img-container {
         width: 100%;
+        margin-top: 0;
     }
 
-    .aboutme-img-container .man-img{
-        width: 62%;
+    .aboutme-man-img {
+        width: 66%;
     }
 
     .aboutme-description {
@@ -162,6 +245,18 @@
     .aboutme-description .para {
         font-size: 16px;
     }
+
+    .aboutme-section .para {
+        font-size: 21px;
+        padding-bottom: 20px;
+    }
+
+    .aboutme-img-container::after {
+        width: 75%;
+        height: 81%;
+    }
+
+
 }
 
 @media screen and (max-width:500px) {
@@ -176,20 +271,12 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    .aboutme-img-container {
-        height: 480px;
-    }
-
-    .ellipse {
-        width: 312px;
-        height: 365px;
-    }
 
     .aboutme-section .description-container {
         padding-left: 0px;
     }
 
-    .aboutme-description .para{
+    .aboutme-description .para {
         padding-top: 30px;
     }
 }

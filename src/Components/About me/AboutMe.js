@@ -8,8 +8,8 @@ export default function Aboutme() {
                 <p className="para">User Interface and User Experience and Also video editing </p>
                 <div className="description-container">
                     <div className="aboutme-img-container">
-                        <div className="ellipse"></div>
-                        <img className="man-img" src="man-img.png" />
+                        {/* <div className="ellipse"></div> */}
+                        <img className="aboutme-man-img" src="aboutme-img.png" />
                     </div>
                     <div className="aboutme-description">
                         <p className="para">A software engineer, the modern-day architect of digital realms, navigates the ethereal landscapes of code, sculpting intangible structures that shape our technological world. With fingers poised over keyboards like virtuoso pianists, they compose symphonies of logic, their minds a labyrinth of algorithms and solutions.Their canvas is a screen, a vast expanse where lines of code dance in intricate patterns, weaving the fabric of programs and applications. Each keystroke is a brushstroke, crafting intricate architectures and breathing life into innovative designs.In this digital atelier, they don the mantle of problem solvers, confronting bugs and glitches like valiant knights in an ever-evolving quest for perfection. Debugging becomes a noble pursuit, unraveling the mysteries hidden within the tangled webs of code. designs.In this digital atelier.</p>

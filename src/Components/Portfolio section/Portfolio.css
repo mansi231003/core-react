@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #C6C6C6;
+    color: var(--primary-text-color);
     background-color: #1a1919;
     padding: 10px 20px 10px 20px;
     border-radius: 8px;
@@ -39,14 +39,29 @@
     justify-content: center; 
     align-items: center;
     gap: 20px;
-    /* padding: 15px; */
+ 
 }
 
 .scroll-bar{
     width: 100%;
 }
 
+@media screen and (min-width: 1900px) {
+    .portfolio-bar{
+        font-size: 24px;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
 
+    .portfolio-section .heading{
+        font-size: 38px;
+        padding-top: 25px;
+    }
+
+    .portfolio-img-wrap .details{
+        font-size: 24px;
+    }
+}
 
 @media screen and (max-width: 670px) {
 

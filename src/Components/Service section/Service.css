@@ -15,7 +15,7 @@
 .service-section .service-para{
     width: max-content;
     padding: 10px 0px 35px 0px;
-    color: #707070;
+    color: var(--secondary-text-color);
     text-align: center;
 
 }
@@ -59,4 +59,26 @@
         grid-template-columns: 1fr;
     }
 
+}
+
+@media screen and (min-width:1200px) {
+.card .para{
+    font-size: 20px;
+}
+
+.card{
+    padding-top: 20px !important;
+}
+
+.appDesign-text{
+    font-size: 20px;
+}
+
+.service-section .service-para{
+    font-size: 20px;
+}
+
+.service-section .heading{
+    font-size: 38px;
+}
 }

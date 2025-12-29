@@ -1,5 +1,5 @@
 .primary-button{
-    background-color: #FD6F00;
+    background-color: var(--primary-color);
     color: white;
     padding: 8px 30px 8px 30px;
     display: flex;
@@ -9,8 +9,8 @@
 }
 
 .secondary-button{
-    border: solid 2px #959595;
-    color: #959595;
+    border: solid 2px var(--primary-text-color);
+    color: var(--primary-text-color);
     border-radius: 8px;
     padding: 12px 30px 12px 30px;
 

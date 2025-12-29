@@ -11,12 +11,12 @@
 
 }
 .appDesign-text{
-    color: rgb(233, 105, 59);
+    color: var(--primary-color);
 }
 
 
 .card .para{
-    color: #707070;
+    color: var(--secondary-text-color);
     width: 75%;
     text-align: center;
 }

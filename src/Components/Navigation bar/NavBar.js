@@ -1,30 +1,48 @@
+import { useEffect, useState } from "react"
 import Button from "../Buttons/Buttons"
 import "./NavBar.css"
 
 export default function NavBar() {
+
+    const [stickyBar, setStickyBar] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+            if(currentScroll==0){
+                setStickyBar(false)
+
+            }
+            if(currentScroll>900){
+                setStickyBar(true)
+            }
+
+        })
+
+    }, [])
+
+
+
     return (
         <>
+            <div className="sidebar-container" >
+                <ul className="sidebar-menu">
+                    <li className="nav-item sidebar-button"><svg width="29" height="29" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 12H3" stroke="#959595" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M21 6H3" stroke="#959595" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M21 18H3" stroke="#959595" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    </li>
+                    <li className="nav-item"><a className="nav-link" href="#">Home</a></li>
+                    <li className="nav-item"><a className="nav-link" href="#">Services</a></li>
+                    <li className="nav-item"><a className="nav-link" href="#">About me</a></li>
+                    <li className="nav-item"><a className="nav-link" href="#">Portfolio</a></li>
+                    <li className="nav-item"><a className="nav-link" href="#">Contact me</a></li>
+                </ul>
+                <div className="sidebar-overlay"></div>
+            </div>
 
-         <div className="sidebar-container" >
-
-            <ul className="sidebar-menu">
-                 <li className="nav-item sidebar-button"><svg width="29" height="29" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14 12H3" stroke="#959595" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M21 6H3" stroke="#959595" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M21 18H3" stroke="#959595" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                </li>
-                <li className="nav-item"><a className="nav-link" href="#">Home</a></li>
-                <li className="nav-item"><a className="nav-link" href="#">Services</a></li>
-                <li className="nav-item"><a className="nav-link" href="#">About me</a></li>
-                <li className="nav-item"><a className="nav-link" href="#">Portfolio</a></li>
-                <li className="nav-item"><a className="nav-link" href="#">Contact me</a></li>
-
-            </ul>
-            <div className="sidebar-overlay"></div>
-
-        </div>
-            <div className="navbar-container">
+            <div className={`navbar-container ${stickyBar?"sticky":"position"}`}>
                 <div className="sidebar-button"><svg width="29" height="29" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 12H3" stroke="#959595" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M21 6H3" stroke="#959595" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

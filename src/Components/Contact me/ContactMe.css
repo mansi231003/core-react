@@ -3,7 +3,7 @@
 }
 
 .contact-para {
-    color: #707070;
+    color: var(--secondary-text-color);
     margin: 0;
     padding: 0px 20px 20px 20px;
     text-align: center;
@@ -36,7 +36,7 @@
     background-color: #1a1919;
     padding: 12px;
     border-radius: 8px;
-    color: #959595;
+    color: var(--primary-text-color);
     height: fit-content;
     display: flex;
     justify-content: space-between;
@@ -44,10 +44,29 @@
 
 }
 
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    color: red;
+    font-size: 12px;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataSend{
+    color: green;
+    font-size: 18px;
+}
+
 .input {
+    width: 100%;
     border: none;
     outline: none;
-    color: #959595;
+    color: var(--primary-text-color);
     background-color: transparent;
 }
 
@@ -60,6 +79,25 @@
     display: flex;
     justify-content: end;
     align-items: center;
+}
+
+@media screen and (min-width: 1900px) {
+
+    .contact-section .heading{
+        font-size: 38px;
+    }
+
+    .contact-para{
+        font-size: 24px;
+    }
+
+    .input{
+        font-size: 24px;
+    }
+
+    .secondary-button{
+        font-size: 23px;
+    }
 }
 
 @media screen and (max-width:500px) {

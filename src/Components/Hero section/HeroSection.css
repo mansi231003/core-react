@@ -7,16 +7,17 @@
 .herosection-container {
     display: flex;
     padding: 20px;
+    padding-right: 0;
     background-color: black;
 
 }
 
 .border-right {
-    border-left: solid 1px #959595;
+    border-left: solid 1px var(--primary-text-color);
 }
 
 .hi-text {
-    color: #707070;
+    color: var(--secondary-text-color);
     font-size: 18px;
     padding-bottom: 10px;
 }
@@ -24,12 +25,12 @@
 .name-text {
     font-size: 18px;
     font-weight: bold;
-    color: #959595;
+    color: var(--secondary-text-color);
 }
 
 .specialization {
-    font-size: 45px;
-    color: #FD6F00;
+    font-size: 38px;
+    color: var(--primary-color);
 }
 
 .apps-container {
@@ -44,7 +45,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: solid 1px #575757;
+    border: solid 1px var(--primary-text-color);
 }
 
 .buttons-container {
@@ -55,20 +56,20 @@
 }
 
 .rating-number {
-    color: orange;
+    color: var(--primary-color);
 }
 
 .rating-name {
     color: #DFDFDF;
-    width: max-content;
-    font-size: 15px;
+    /* width: max-content; */
+    font-size: 18px;
 
 }
 
 .rating-section {
     display: flex;
     gap: 10px;
-    padding: 15px;
+    padding: 20px 0px 20px 15px;
     background-color: #1a1919;
     border-radius: 8px;
     width: 79%;
@@ -83,51 +84,95 @@
 
 .image-container {
     position: relative;
-    width: 45%;
+    width: 48%;
     display: flex;
     justify-content: center;
     align-items: end;
-    height: 500px;
+    margin-top: -40px;
+
+}
+
+.image-container::after{
+    content: "";
+    position: absolute;
+    width: 89%;
+    height: 80%;
+    background-color: #1a1919;
+    border-radius: 50%;
+    
 }
 
 .man-img {
-    position: absolute;
-    top: 0px;
-    width: 65%;
-    height: 100%;
-}
-
-.image-circle {
-    border-radius: 50%;
-    width: 420px;
-    height: 400px;
-    background-color: #1a1919;
-}
-@media screen and (max-width: 1030px) {
-
-.man-img{
+    width: 70%;
     object-fit: cover;
-
-    }
+    height: 100%;
+    z-index: 3;
 }
 
-@media screen and (max-width: 880px) {
-    .image-container {
+@media screen and (min-width:1400px) {
+    .rating-wrapper{
+        width: 29%;
+    }
+    .hi-text{
+        font-size: 22px;
+    }
+    .rating-section{
+        width: 500px;
+    }
+
+    .name-text{
+        font-size: 22px;
+    }
+
+    .herosection-container .description-container{
+        font-size: 24px;
+    }
+
+    .app-wrapper{
+        width: 60px;
+        height: 60px;
+    }
+
+    .rating-name{
+        font-size: 22px;
+    }
+
+    .primary-button{
+        font-size: 18px;
+    }
+
+    .secondary-button{
+        font-size: 18px;
+    }
+
+    
+}
+
+@media screen and (max-width: 900px) {
+
+    .image-container::after{
+        width: 92%;
+    }
+
+    .image-container{
         width: 50%;
-        height: 456px;
-    }
-
-    .image-circle {
-        width: 350px;
-        height: 350px;
-    }
-
-    .specialization {
-        font-size: 36px;
     }
 
     .rating-name {
         font-size: 12px;
+    }
+
+    .specialization{
+        font-size: 35px;
+    }
+
+    .primary-button{
+        padding: 6px 24px 6px 24px;
+    }
+
+    .secondary-button{
+        padding: 9px 24px 9px 24px;
+
     }
 
     
@@ -143,16 +188,7 @@
 
     .image-container {
         width: 100%;
-        height: 500px;
-    }
-
-    .image-circle {
-        width: 420px;
-        height: 400px;
-    }
-
-    .man-img {
-        width: 54%;
+        padding-top: 20px;
     }
 
     .herosection-container .description-container {
@@ -180,7 +216,7 @@
     .specialization {
         display: flex;
         justify-content: center;
-        font-size: 50px;
+        font-size: 45px;
     }
 
     .app-wrapper {
@@ -203,7 +239,15 @@
 
 
     .rating-name {
-        font-size: 16px;
+        font-size: 20px;
+    }
+
+    .rating-number{
+        font-size: 22px;
+    }
+
+    .primary-button{
+        padding: 10px 30px 10px 30px;
     }
 }
 
@@ -224,21 +268,9 @@
     }
 
     .rating-name {
-        font-size: 14px;
+        font-size: 16px;
     }
 
-    .man-img {
-        width: 285px;
-    }
-
-    .image-circle {
-        width: 358px;
-        height: 325px;
-    }
-
-    .image-container{
-        height: 435px;
-    }
 
 }
 
@@ -251,16 +283,13 @@
         width: 98%;
     }
 
-    .image-container .man-img{
-        width: 250px;
+        .rating-name {
+        font-size: 13px;
     }
 
-        .image-circle {
-        width: 294px;
-        height: 305px;
+    .rating-number{
+        font-size: 14px;
     }
 
-    .image-container{
-        height: 405px;
-    }
+   
 }

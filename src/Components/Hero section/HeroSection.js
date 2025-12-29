@@ -50,7 +50,6 @@ export default function HeroSection() {
 
                 </div>
                 <div className="image-container">
-                    <div className="image-circle"></div>
                     <img className="man-img" src="man-img.png"/>
                 </div>
 
