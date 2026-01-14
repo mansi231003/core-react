@@ -3,7 +3,7 @@ import Button from "../Buttons/Buttons"
 export default function HeroSection() {
     return (
         <>
-            <div className="herosection-container">
+            <div id="home" className="herosection-container section">
                 <div className="description-container">
                     <div className="hi-text">Hi I am</div>
                     <div className="name-text">Mahmood Fazile</div>

@@ -8,8 +8,16 @@
     border-radius: 8px;
     padding-top: 10px;
     padding-bottom: 10px;
+    border: solid 1px #1a1919;
+    transition: transform .5s ease;
 
 }
+.card:hover{
+    transform: translateY(-10px);
+  border-color: var(--primary-color);
+
+}
+
 .appDesign-text{
     color: var(--primary-color);
 }
@@ -27,8 +35,15 @@
     width: 30%;
 }
 
+.portfolio-img-wrap:hover .portfolio-img{
+        transform: scale(0.97);
+}
+
+
 .portfolio-img{
     width: 100%;
+    transition: transform 0.5s ease;
+
 }
 
 .portfolio-img-wrap .details{

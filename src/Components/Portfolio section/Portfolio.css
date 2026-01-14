@@ -1,5 +1,21 @@
 .portfolio-section .heading {
     color: white;
+    position: relative;
+}
+
+.heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transform: translateX(-50%);
+    transition: all .8s ease;
+}
+.heading:hover::after {
+    width: 90%;
 }
 
 .portfolio-section {
@@ -27,9 +43,19 @@
     justify-content: center;
     color: var(--primary-text-color);
     background-color: #1a1919;
-    padding: 10px 20px 10px 20px;
+    padding: 12px 75px 12px 75px;
     border-radius: 8px;
+    cursor: pointer;
+    border: solid 1px black;
+    position: relative;
+    overflow: hidden;
+    height: 20px;
 
+}
+
+.portfolio-bar .bar-item:hover{
+    color: white;
+    border: solid 1px var(--primary-color);
 }
 
 .portfolio-img-section{
@@ -44,6 +70,12 @@
 
 .scroll-bar{
     width: 100%;
+}
+
+.bg-orange{
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    padding: 12px 25px 12px 25px!important;
 }
 
 @media screen and (min-width: 1900px) {
@@ -63,7 +95,7 @@
     }
 }
 
-@media screen and (max-width: 670px) {
+/* @media screen and (max-width: 670px) {
 
 .portfolio-bar{
     gap: 8px;
@@ -73,7 +105,7 @@
     padding: 10px;
 }
 
-}
+} */
 
 @media screen and (max-width: 500px) {
 

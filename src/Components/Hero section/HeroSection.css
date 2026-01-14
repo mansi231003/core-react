@@ -28,10 +28,21 @@
     color: var(--secondary-text-color);
 }
 
+.hi-text:hover,.name-text:hover{
+    color: white;
+}
+
 .specialization {
     font-size: 38px;
     color: var(--primary-color);
+    transition: letter-spacing .9s ease;
+
 }
+
+.specialization:hover{
+    letter-spacing: 1px;
+}
+
 
 .apps-container {
     display: flex;
@@ -46,6 +57,13 @@
     align-items: center;
     border-radius: 50%;
     border: solid 1px var(--primary-text-color);
+    cursor: pointer;
+    transition: transform .5s ease;
+}
+
+.app-wrapper:hover{
+    border-color: white;
+    transform: scale(1.07);
 }
 
 .buttons-container {
@@ -61,7 +79,6 @@
 
 .rating-name {
     color: #DFDFDF;
-    /* width: max-content; */
     font-size: 18px;
 
 }
@@ -73,6 +90,7 @@
     background-color: #1a1919;
     border-radius: 8px;
     width: 79%;
+    transition: transform .5s ease;
 }
 
 .rating-wrapper {
@@ -82,6 +100,7 @@
     flex-direction: column;
 }
 
+
 .image-container {
     position: relative;
     width: 48%;
@@ -89,8 +108,10 @@
     justify-content: center;
     align-items: end;
     margin-top: -40px;
+    transition: transform .5s ease;
 
 }
+
 
 .image-container::after{
     content: "";
@@ -99,14 +120,32 @@
     height: 80%;
     background-color: #1a1919;
     border-radius: 50%;
+    z-index: 3;
     
 }
+
+.image-container::before{
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 80.4%;
+    background: conic-gradient(var(--primary-color) var(--angle), black 0deg);
+    border-radius: 50%;
+    z-index: 2;
+    
+}
+
+.image-container:hover::before {
+    animation: color .9s ease-in-out forwards;
+
+}
+
 
 .man-img {
     width: 70%;
     object-fit: cover;
     height: 100%;
-    z-index: 3;
+    z-index: 4;
 }
 
 @media screen and (min-width:1400px) {
@@ -148,10 +187,14 @@
     
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 920px) {
 
     .image-container::after{
         width: 92%;
+    }
+
+    .image-container::before{
+        width: 93%;
     }
 
     .image-container{
@@ -166,16 +209,6 @@
         font-size: 35px;
     }
 
-    .primary-button{
-        padding: 6px 24px 6px 24px;
-    }
-
-    .secondary-button{
-        padding: 9px 24px 9px 24px;
-
-    }
-
-    
 }
 
 @media screen and (max-width: 720px) {
@@ -290,6 +323,11 @@
     .rating-number{
         font-size: 14px;
     }
+
+        .primary-button{
+        padding: 10px 25px 10px 25px;
+    }
+
 
    
 }

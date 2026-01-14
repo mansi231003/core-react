@@ -4,14 +4,14 @@ import { Card2 } from "../Cards/Cards"
 export default function Portfolio(){
     return(
         <>
-        <div className="portfolio-section">
+        <div id="portfolio" className="portfolio-section section">
             <h1 className="heading">Portfolio</h1>
             <div className="portfolio-bar">
-                <div className="bar-item">All</div>
-                <div className="bar-item">Website Design</div>
-                <div className="bar-item">App Mobile Design</div>
-                <div className="bar-item">App Desktop</div>
-                <div className="bar-item">Braiding</div>
+                <div className="bar-item bg-orange"><div className="animation"><span className="effect">All</span><span className="effect">All</span></div></div>
+                <div className="bar-item"><div className="animation"><span className="effect">App Mobile Design</span><span className="effect">App Mobile Design</span></div></div>
+                <div className="bar-item"><div className="animation"><span className="effect">App Desktop</span><span className="effect">App Desktop</span></div></div>
+                <div className="bar-item"><div className="animation"><span className="effect">Braiding</span><span className="effect">Braiding</span></div></div>
+                <div className="bar-item"><div className="animation"><span className="effect">Website Design</span><span className="effect">Website Design</span></div></div>
             </div>
             <div className="scroll-bar">
             <div className="portfolio-img-section">

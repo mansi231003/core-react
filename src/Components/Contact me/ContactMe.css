@@ -1,5 +1,6 @@
 .contact-section .heading {
     color: white;
+    position: relative;
 }
 
 .contact-para {
@@ -7,7 +8,12 @@
     margin: 0;
     padding: 0px 20px 20px 20px;
     text-align: center;
+    transition: color .4s ease;
 
+}
+
+.contact-para:hover{
+    color: white;
 }
 
 .contact-section {
@@ -57,11 +63,13 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .dataSend{
+    width: max-content;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .input {
@@ -99,6 +107,12 @@
 
     .secondary-button{
         font-size: 23px;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .form{
+        width: 82%;
     }
 }
 

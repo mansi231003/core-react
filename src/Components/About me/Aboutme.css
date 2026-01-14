@@ -3,8 +3,8 @@
     padding-top: 20px;
     margin-bottom: 0;
     font-size: 33px;
+    position: relative;
 }
-
 
 .aboutme-section {
     padding: 25px 0px 25px 0px;
@@ -21,6 +21,12 @@
     color: var(--secondary-text-color);
     text-align: center;
     font-size: 18px;
+    transition: color .4s ease;
+
+}
+
+.aboutme-section .abt-para:hover {
+    color: white;
 }
 
 .aboutme-img-container {
@@ -29,23 +35,59 @@
     display: flex;
     justify-content: center;
     align-items: end;
+    transition: transform .5s ease;
 }
 
+/* .aboutme-img-container:hover {
+    transform: scale(0.97);
+} */
+
 .aboutme-man-img {
-    width: 80%;
+    width: 82%;
     object-fit: cover;
     height: 99%;
-    z-index: 9;
+    z-index: 5;
 }
 
 .aboutme-img-container::after {
     content: "";
     position: absolute;
-    height: 79%;
+    height: 80%;
     width: 95%;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     background-color: #1a1919;
+    z-index: 3;
+
+}
+
+
+.aboutme-img-container::before {
+    content: "";
+    position: absolute;
+    height: 80.5%;
+    width: 96%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background: conic-gradient(var(--primary-color) var(--angle), black 0deg);
+    z-index: 2;
+
+}
+
+@keyframes color {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+
+    }
+
+}
+
+.aboutme-img-container:hover::before {
+    animation: color .9s ease-in-out forwards;
 
 }
 
@@ -94,11 +136,57 @@
     align-items: center;
 }
 
+@property --angle {
+
+    syntax: "<angle>";
+
+    initial-value: 0deg;
+
+    inherits: false;
+
+}
+
 .social-media-icon {
-    border: solid 7px var(--primary-color);
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    --angle: calc(var(--percentage)*3.6deg);
+    background: conic-gradient(var(--primary-color) var(--angle), #333 0deg);
+
+}
+
+@keyframes fill {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: calc(var(--percentage)*3.6deg);
+    }
+
+}
+
+.social-media-icon:hover {
+    animation: fill .7s ease-in-out forwards;
+
+}
+
+.social-media-icon::before {
+    content: "";
+    position: absolute;
     width: 64px;
     height: 64px;
+    border-radius: 50%;
+    background: black;
+}
+
+.skill-img {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,6 +200,7 @@
     align-items: center;
     width: 95%;
     padding: 10px;
+    text-align: center;
 }
 
 .icon-percentage-wrap .percentage {
@@ -124,8 +213,11 @@
     }
 
     .aboutme-img-container::after {
-
         width: 76%;
+    }
+
+    .aboutme-img-container::before {
+        width: 77%;
     }
 
     .aboutme-section .heading {
@@ -150,16 +242,21 @@
     }
 }
 
-@media screen and (max-width:1020px) {
+@media screen and (max-width:1030px) {
     .aboutme-man-img {
-        width: 88%;
+        width: 95%;
         height: 79%;
     }
 
     .aboutme-img-container::after {
-
-        width: 100%;
+        width: 99%;
         height: 64%;
+
+    }
+
+    .aboutme-img-container::before {
+        width: 100%;
+        height: 64.5%;
 
     }
 
@@ -172,7 +269,7 @@
 
     .aboutme-man-img {
         height: 75%;
-        width: 85%;
+        /* width: 85%; */
     }
 
     .aboutme-section .description-container {
@@ -210,11 +307,14 @@
 
     }
 
-    .aboutme-img-container{
-        margin-top: -50px;
+    .aboutme-img-container::before {
+        height: 74.5%;
+
     }
 
-
+    .aboutme-img-container {
+        margin-top: -50px;
+    }
 
 }
 
@@ -247,13 +347,19 @@
     }
 
     .aboutme-section .para {
-        font-size: 21px;
+        font-size: 18px;
         padding-bottom: 20px;
     }
 
     .aboutme-img-container::after {
         width: 75%;
         height: 81%;
+    }
+
+    .aboutme-img-container::before {
+        height: 81.5%;
+        width: 76%;
+
     }
 
 

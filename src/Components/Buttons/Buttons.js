@@ -17,7 +17,13 @@ export default function Button({children,className,variant,...rest}) {
     }
     return (
         <>
-            <div className={`${style} ${className}`} {...rest}>{children}</div>
+            <div className={`${style} ${className}`} {...rest}>
+            <div className="animation">
+                <span className="effect">{children}</span>
+                <span className="effect">{children}</span>
+
+            </div>
+            </div>
         </>
     )
 }

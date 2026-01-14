@@ -1,4 +1,5 @@
 import "./ContactMe.css"
+import { CircleCheck } from "lucide-react";
 import Button from "../Buttons/Buttons"
 import { useEffect, useState } from "react"
 export default function ContactMe() {
@@ -22,7 +23,7 @@ export default function ContactMe() {
         // console.log(emailLower)
         if (emailLower.length > 0) {
             setInvalidEmail(true)
-                   console.log(emailLower.trim(" "));
+                //    console.log(emailLower.trim(" "));
 
         }
         if (emailLower.length > 0 && emailLower.includes("@")) {
@@ -139,7 +140,7 @@ export default function ContactMe() {
 
     return (
         <>
-            <div className="contact-section">
+            <div id="contact" className="contact-section section">
                 <h1 className="heading">Contact me</h1>
                 <p className="contact-para">Cultivating Connections: Reach Out and Connect with Me</p>
                 <div className="form-container">
@@ -189,7 +190,7 @@ export default function ContactMe() {
                             }
                         </div>
                         <div></div>
-                        <div className="form-button-container" >{sending ? <div className="flex"><div className="dataSend">Data send successfully..</div><Button variant='primary'>Sending...</Button></div> : <Button variant='secondary' type="submit" onClick={sendForm}>Send</Button>}</div>
+                        <div className="form-button-container" >{sending ? <div className="flex"><div className="dataSend">Data send successfully...</div><CircleCheck color="green"/><Button variant='primary'>Sending...</Button></div> : <Button variant='secondary' type="submit" onClick={sendForm}>Send</Button>}</div>
                     </form>
                 </div>
             </div>
