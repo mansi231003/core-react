@@ -9,7 +9,6 @@
     padding: 20px;
     padding-right: 0;
     background-color: black;
-
 }
 
 .border-right {
@@ -28,7 +27,8 @@
     color: var(--secondary-text-color);
 }
 
-.hi-text:hover,.name-text:hover{
+.hi-text:hover,
+.name-text:hover {
     color: white;
 }
 
@@ -39,10 +39,9 @@
 
 }
 
-.specialization:hover{
+.specialization:hover {
     letter-spacing: 1px;
 }
-
 
 .apps-container {
     display: flex;
@@ -59,12 +58,33 @@
     border: solid 1px var(--primary-text-color);
     cursor: pointer;
     transition: transform .5s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.app-wrapper:hover{
-    border-color: white;
-    transform: scale(1.07);
+.logo-animation {
+    height: 100%;
+    width: 200%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* left: -40px; */
+    display: flex;
+
 }
+.logo-effect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+
+/* .app-wrapper:hover{
+    border-color: var(--primary-color);
+    transform: scale(1.07);
+} */
 
 .buttons-container {
     display: flex;
@@ -80,7 +100,6 @@
 .rating-name {
     color: #DFDFDF;
     font-size: 18px;
-
 }
 
 .rating-section {
@@ -109,11 +128,10 @@
     align-items: end;
     margin-top: -40px;
     transition: transform .5s ease;
-
 }
 
 
-.image-container::after{
+.image-container::after {
     content: "";
     position: absolute;
     width: 89%;
@@ -121,10 +139,10 @@
     background-color: #1a1919;
     border-radius: 50%;
     z-index: 3;
-    
+
 }
 
-.image-container::before{
+.image-container::before {
     content: "";
     position: absolute;
     width: 90%;
@@ -132,14 +150,13 @@
     background: conic-gradient(var(--primary-color) var(--angle), black 0deg);
     border-radius: 50%;
     z-index: 2;
-    
+
 }
 
 .image-container:hover::before {
     animation: color .9s ease-in-out forwards;
 
 }
-
 
 .man-img {
     width: 70%;
@@ -149,55 +166,56 @@
 }
 
 @media screen and (min-width:1400px) {
-    .rating-wrapper{
+    .rating-wrapper {
         width: 29%;
     }
-    .hi-text{
+
+    .hi-text {
         font-size: 22px;
     }
-    .rating-section{
+
+    .rating-section {
         width: 500px;
     }
 
-    .name-text{
+    .name-text {
         font-size: 22px;
     }
 
-    .herosection-container .description-container{
+    .herosection-container .description-container {
         font-size: 24px;
     }
 
-    .app-wrapper{
+    .app-wrapper {
         width: 60px;
         height: 60px;
     }
 
-    .rating-name{
+    .rating-name {
         font-size: 22px;
     }
 
-    .primary-button{
+    .primary-button {
         font-size: 18px;
     }
 
-    .secondary-button{
+    .secondary-button {
         font-size: 18px;
     }
 
-    
 }
 
 @media screen and (max-width: 920px) {
 
-    .image-container::after{
+    .image-container::after {
         width: 92%;
     }
 
-    .image-container::before{
+    .image-container::before {
         width: 93%;
     }
 
-    .image-container{
+    .image-container {
         width: 50%;
     }
 
@@ -205,7 +223,7 @@
         font-size: 12px;
     }
 
-    .specialization{
+    .specialization {
         font-size: 35px;
     }
 
@@ -275,18 +293,18 @@
         font-size: 20px;
     }
 
-    .rating-number{
+    .rating-number {
         font-size: 22px;
     }
 
-    .primary-button{
+    .primary-button {
         padding: 10px 30px 10px 30px;
     }
 }
 
 @media screen and (max-width: 500px) {
 
-    .herosection-container{
+    .herosection-container {
         padding-left: 5px;
         padding-right: 5px;
     }
@@ -308,26 +326,26 @@
 }
 
 @media screen and (max-width:350px) {
-    .specialization{
+    .specialization {
         font-size: 37px;
     }
 
-    .herosection-container .description-container{
+    .herosection-container .description-container {
         width: 98%;
     }
 
-        .rating-name {
+    .rating-name {
         font-size: 13px;
     }
 
-    .rating-number{
+    .rating-number {
         font-size: 14px;
     }
 
-        .primary-button{
+    .primary-button {
         padding: 10px 25px 10px 25px;
     }
 
 
-   
+
 }

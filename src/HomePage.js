@@ -8,7 +8,7 @@ export default function HomePage(){
         <Header/>
         <Profile/>
         <Partners/>
-        <Link to='/table'>for table</Link>
+        <Link to='/project'>..project</Link>
 
         </>
     )

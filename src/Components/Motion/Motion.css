@@ -1,0 +1,25 @@
+.motion{
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border: solid 1px white;
+    /* overflow: hidden; */
+}
+.boxx{
+  width: 100px;
+  height: 100px;
+  background-color: rgb(250, 28, 202);
+  border-radius: 20px;
+}
+
+.round{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: orangered;
+}

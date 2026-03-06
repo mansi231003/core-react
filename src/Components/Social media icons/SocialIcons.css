@@ -1,0 +1,11 @@
+.solid-color{
+    background-color: orangered;
+}
+
+.gradient-color{
+    background: linear-gradient(pink,orangered);
+}
+
+.default{
+    background-color: transparent;
+}

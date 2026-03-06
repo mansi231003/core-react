@@ -2,10 +2,10 @@ import './App.css';
 import HomePage from './HomePage';
 import {DataTable,Table} from './Components/Table/Table';
 import { BrowserRouter as Router,Route,Link,Routes } from 'react-router-dom';
-// import Form from './Components/Form/Form';
 import {ClassForm} from './Components/Form/Form';
 import Project from './Project';
-
+import Animation from './Components/Animations/Animations';
+import Motion from './Components/Motion/Motion';
 function App() {
   const items = [
       { id: 1, name: "Pizza", amount: 80, spendDate: "2020-10-10", category: "Food" },
@@ -27,6 +27,9 @@ function App() {
       <Route path='/data-table' element={<DataTable items={items}/>} ></Route>
       <Route path='/form' element={<ClassForm/>}></Route>
       <Route path='/project' element={<Project/>}></Route>
+      <Route path='/animation' element={<Animation/>}></Route>
+      <Route path='/motion' element={<Motion/>}></Route>
+
   </Routes>
   </Router>
   );
