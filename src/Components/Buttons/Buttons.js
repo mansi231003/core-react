@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import "./Buttons.css"
 
 export default function Button({children,className,variant,...rest}) {
