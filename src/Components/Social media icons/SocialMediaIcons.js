@@ -16,7 +16,7 @@ export default function SocialMediaIcons({children,className,variant}){
     }
     return(
         <>
-          <div className={`${style} app-wrapper`}><motion.div initial={{left:[0,-44,-40]}} whileHover={{left:[-40,4,0]}}  transition={{duration:0.3}} className="logo-animation"><div className="logo-effect">{children}</div>
+          <div className={`${style} app-wrapper`}><motion.div initial={{left:["0%","-144%","-100%"]}} whileHover={{left:["-100%","44%","0%"]}}  transition={{duration:0.3}} className="logo-animation"><div className="logo-effect">{children}</div>
                         <div className="logo-effect">{children}</div></motion.div>
                         </div>
         </>

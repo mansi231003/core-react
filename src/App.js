@@ -6,6 +6,8 @@ import {ClassForm} from './Components/Form/Form';
 import Project from './Project';
 import Animation from './Components/Animations/Animations';
 import Motion from './Components/Motion/Motion';
+import { Counter } from './Redux/features/counter/counter';
+
 function App() {
   const items = [
       { id: 1, name: "Pizza", amount: 80, spendDate: "2020-10-10", category: "Food" },
@@ -20,9 +22,10 @@ function App() {
       { id: 10, name: "Exam Fees", amount: 1245, spendDate: "2020-11-04", category: "Academic" }
     ]
   return (
+
   <Router>
     <Routes>
-      <Route path='/' element={<HomePage/>}></Route>
+      <Route path='/' element={<Counter/>}></Route>
       <Route path='/table' element={<Table items={items}/>}></Route>
       <Route path='/data-table' element={<DataTable items={items}/>} ></Route>
       <Route path='/form' element={<ClassForm/>}></Route>
